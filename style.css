@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+}
+.carousel-container {
+  overflow: hidden;
+}
+
+.movie-tile {
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.movie-poster,
+.movie-tile {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-tile:hover {
+  transform: scale(1.15);
+}
+.movie-tile:focus {
+  border: none;
+}
+.movie-detail-box {
+  background-color: #525151;
+}
