@@ -4,6 +4,8 @@
 
 # Http Requests such as GET, POST, PUT and DELETE were also specified to be used
 
+## To use, clone the repository, install vite if you haven't then run "npm run dev" on the terminal
+
 # DO NOT VIEW ON MOBILE
 
 #### Project Overview
