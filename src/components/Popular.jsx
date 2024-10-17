@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick/lib/slider";
 import displayMovies from "./displayMovies";
 import AddToWatchList from "./AddToWatchList";
+import useFetch from "../customHooks/useFetch";
 
 function Popular() {
   const [movieList, setMovieList] = useState([]);
@@ -12,24 +13,10 @@ function Popular() {
   const [currentmovieType, setCurrentMovieType] = useState("");
 
   const addToWatchlistRef = useRef();
-  function getMovie(link) {
-    fetch(link, {
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OWNhMzlkMGMzOTZmMDhlYjBjZjllZDdlMGM4MjU3MiIsIm5iZiI6MTcyODQ4ODA1My4zMjE3ODcsInN1YiI6IjY3MDYzM2E3MDAzYzkyMTRhMGIzYTM4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5I8V2i3fa2cLROcgGbqagpuqIHXCA7IfRU-MBHyrsro",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setMovieList(data.results);
-      });
-  }
-  useEffect(() => {
-    const url =
-      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=3";
-    getMovie(url);
-  }, []);
+  useFetch(
+    "https://api.themoviedb.org/3/movie/popular?language=en-US&page=3",
+    setMovieList
+  );
 
   const handleSelectedMovie = (
     movieId,

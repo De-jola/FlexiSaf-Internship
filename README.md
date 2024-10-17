@@ -1,4 +1,6 @@
-# This is my submission of Week 4 task.
+# This is my submission of Week 4 and week 5 task.
+
+# Week 4 task
 
 # The task specified using APIs in a react application
 
@@ -25,6 +27,12 @@
 #### Removing from WatchList - DELETE
 
 # Click thrice on the movie tile you want to delete. Note do not click on the movie tiles that are already in watchList, it will not work.
+
+# Week 5 Task
+
+### I updated the Discover, Popular and TvSeries components to use hooks: useState, useEffect and useRef
+
+## Created a custom Hook "useFetch" that fetches data from an API and sets movieList state. This hook is used only in the Discover and Popular components
 
 ### Closing Remarks
 
