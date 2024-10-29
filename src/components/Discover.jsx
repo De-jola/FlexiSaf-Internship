@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useAsync } from "react-async";
 import Slider from "react-slick/lib/slider";
 import displayMovies from "./displayMovies";
 import AddToWatchList from "./AddToWatchList";
